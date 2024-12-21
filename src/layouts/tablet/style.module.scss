@@ -1,0 +1,27 @@
+.wrapper {
+  --wrapper-padding-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--bg-windows);
+}
+
+.content {
+  display: flex;
+  background-color: var(--bg-windows);
+
+  flex: 1;
+}
+
+.nav {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--bg-windows);
+  display: flex;
+  justify-content: center;
+  z-index: 99999;
+}

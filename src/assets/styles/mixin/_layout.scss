@@ -1,0 +1,63 @@
+@use './fonts' as *;
+
+@mixin page-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  flex: 1;
+  color: var(--text-color-100);
+  border-left: var(--base-grey-40) 1px solid;
+  border-right: var(--base-grey-40) 1px solid;
+  padding: 24px;
+
+  @media (max-width: 990px) {
+    padding: 16px;
+    margin: 0 20px;
+  }
+  @media (max-width: 500px) {
+    padding: 12px;
+    margin: 0 16px;
+  }
+}
+
+@mixin page-title {
+  @include heading-h4-medium;
+
+  @media (max-width: 990px) {
+    @include heading-h5-medium;
+  }
+  @media (max-width: 500px) {
+    @include heading-h6-medium;
+  }
+}
+
+@mixin scroll {
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+    cursor: auto;
+    background-color: var(--bg-grey);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    background-color: var(--base-grey-40);
+
+    &:hover {
+      background-color: var(--base-grey-30);
+    }
+
+    &:active {
+      background-color: var(--base-grey-50);
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--bg-grey);
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,55 @@
+@use '@mixin/layout';
+
+.title {
+  @include layout.page-title;
+}
+
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  color: var(--text-color-100);
+  padding: 24px;
+
+  width: calc(100% - var(--page-width, 0px));
+}
+
+.border {
+  width: 100%;
+
+  &:has(.border__left:hover),
+  &:has(.border__left:active),
+  &:has(.border__right:hover),
+  &:has(.border__right:active) {
+    .border__left,
+    .border__right {
+      border-left: var(--base-grey-80) 2px dashed;
+    }
+  }
+
+  &__left,
+  &__right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    border-left: var(--base-grey-40) 1px solid;
+    transform: translateX(5px);
+    cursor: col-resize;
+
+    &:hover,
+    &:active {
+      border-left: var(--base-grey-80) 2px dashed;
+      cursor: col-resize;
+    }
+  }
+
+  &__left {
+    left: 0;
+  }
+  &__right {
+    right: 0;
+  }
+}

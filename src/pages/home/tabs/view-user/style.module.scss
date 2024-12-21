@@ -1,0 +1,44 @@
+@use '@mixin/fonts';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  @media (max-width: 990px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card {
+  @include fonts.body-text-regular;
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  box-shadow: var(--shadow-small);
+  border-radius: 16px;
+  padding: 16px;
+  transition: transform ease-in-out 0.15s;
+  cursor: pointer;
+  color: var(--text-color-40);
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &__flag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+
+    svg {
+      width: 50px;
+      aspect-ratio: 1;
+    }
+  }
+}

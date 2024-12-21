@@ -1,0 +1,78 @@
+@use '@mixin/fonts';
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 24px 0px;
+    border-radius: 16px;
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 1280px) or (max-height: 668px) {
+      padding: 20px 0;
+      gap: 16px;
+      border-radius: 12px;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      a:not(.active):hover {
+        rect {
+          stroke: var(--tertiary-80);
+        }
+        path {
+          stroke: var(--tertiary-80);
+        }
+      }
+    }
+
+    a {
+      rect {
+        stroke: var(--text-color-100);
+      }
+      path {
+        stroke: var(--text-color-100);
+      }
+    }
+
+    a:not(.active):active {
+      rect {
+        stroke: var(--tertiary-100);
+      }
+      path {
+        stroke: var(--tertiary-100);
+      }
+    }
+
+    li {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      list-style: none;
+
+      @media (min-width: 990px) {
+        &:hover::before {
+          @include fonts.captions-text-medium;
+          content: attr(data-title);
+          position: absolute;
+          top: calc(100% + 4px);
+          color: var(--text-color-100);
+        }
+      }
+    }
+  }
+
+  .active {
+    rect {
+      stroke: var(--primary-100);
+    }
+    path {
+      stroke: var(--primary-100);
+    }
+  }
+}

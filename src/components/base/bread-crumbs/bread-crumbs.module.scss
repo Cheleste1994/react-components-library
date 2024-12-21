@@ -1,0 +1,36 @@
+@use '@mixin/fonts';
+
+.wrapper {
+  @include fonts.captions-text-medium;
+  display: flex;
+  align-items: center;
+  color: var(--primary-100);
+
+  > ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    > li {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      transition: color 0.15s ease-in-out;
+      cursor: pointer;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: var(--primary-80);
+        }
+      }
+
+      &:active {
+        color: var(--primary-100-pressed);
+      }
+    }
+  }
+}

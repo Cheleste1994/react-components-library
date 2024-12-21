@@ -1,0 +1,129 @@
+.label {
+  display: flex;
+
+  &.gap {
+    &_none {
+      gap: 0px;
+    }
+    &_sm {
+      gap: 4px;
+    }
+    &_md {
+      gap: 8px;
+    }
+    &_lg {
+      gap: 12px;
+    }
+    &_xl {
+      gap: 16px;
+    }
+    &_xxl {
+      gap: 24px;
+    }
+  }
+
+  &.max-width {
+    &_full {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &.items {
+    &_top {
+      align-items: start;
+    }
+    &_center {
+      align-items: center;
+    }
+  }
+
+  &:has(input:disabled) > span {
+    color: var(--text-color-20);
+  }
+}
+
+.container {
+  position: relative;
+  height: 16px;
+  width: 16px;
+
+  &.size {
+    &_sm {
+      height: 12px;
+      width: 12px;
+    }
+    &_md {
+      height: 16px;
+      width: 16px;
+    }
+    &_lg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .checkmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--base-grey-80);
+    border-radius: 4px;
+  }
+
+  &:hover input ~ .checkmark {
+    border-color: var(--primary-80);
+  }
+
+  input:disabled ~ .checkmark {
+    background-color: var(--base-grey-30);
+    border-color: var(--base-grey-60);
+  }
+
+  input:disabled ~ .checkmark:after {
+    background-color: var(--base-grey-60);
+    border-color: var(--base-grey-10);
+  }
+
+  input:checked ~ .checkmark {
+    border-color: var(--primary-100);
+  }
+
+  input:checked:disabled ~ .checkmark {
+    border-color: var(--base-grey-60);
+    background-color: var(--base-grey-60);
+  }
+
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+
+    top: 12%;
+    width: 35%;
+    height: 60%;
+    border: solid var(--primary-100);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
