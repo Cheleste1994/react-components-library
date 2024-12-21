@@ -8,7 +8,7 @@ import tseslint from 'typescript-eslint';
 
 export default [
   {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    files: ['**/*.{ts,tsx}'],
     settings: {
       react: {
         version: 'detect',
@@ -31,7 +31,7 @@ export default [
     },
   },
   {
-    ignores: ['src/vite-env.d.ts'],
+    ignores: ['src/vite-env.d.ts', 'dist'],
   },
   eslintPluginPrettierRecommended,
   eslintConfigPrettier,
