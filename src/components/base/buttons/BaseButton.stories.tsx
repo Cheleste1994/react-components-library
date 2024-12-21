@@ -10,7 +10,6 @@ const meta: Meta<typeof BaseButton> = {
   component: BaseButton,
   args: {
     onClick: fn(),
-    iconSize: 'md',
   },
   parameters: {
     docs: {

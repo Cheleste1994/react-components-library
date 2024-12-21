@@ -1,4 +1,5 @@
-@use 'mixin/fonts';
+@use '@mixin/fonts';
+@use '@mixin/layout';
 
 :global(.react-datepicker__tab-loop) {
   position: absolute;
@@ -198,7 +199,7 @@
       overflow: auto;
 
       @media (min-width: 990px) {
-        @include scroll;
+        @include layout.scroll;
       }
 
       > li {

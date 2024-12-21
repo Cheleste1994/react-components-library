@@ -46,6 +46,15 @@ export const NameToFlag: { [key in FlagCodes]: React.FunctionComponent } = {
   mo: Fragment,
   mw: Fragment,
   my: Fragment,
+  bd: Fragment,
+  mh: Fragment,
+  ml: Fragment,
+  mq: Fragment,
+  mr: Fragment,
+  mt: Fragment,
+  mu: Fragment,
+  mv: Fragment,
+  mx: Fragment,
 };
 
 interface FlagProps {
