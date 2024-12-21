@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+
+  height: var(--header-height);
+  background-color: var(--bg-windows);
+  padding: 0 var(--wrapper-padding-right);
+  width: 100%;
+  border-bottom: var(--base-grey-40) 1px solid;
+  z-index: 9999;
+
+  &.scrollable {
+    border-bottom: var(--base-grey-60) 2px solid;
+  }
+}
+
+.control {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  &__theme {
+    display: flex;
+
+    svg {
+      path {
+        fill: var(--text-color-80);
+      }
+    }
+  }
+}

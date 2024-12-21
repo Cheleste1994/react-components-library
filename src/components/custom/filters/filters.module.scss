@@ -1,0 +1,146 @@
+@use '@mixin/fonts';
+@use '@mixin/layout';
+
+.label {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &.open:focus-within {
+    .wrapper.dropdown {
+      visibility: visible;
+      opacity: 1;
+      z-index: 100;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  svg {
+    width: 20px;
+    aspect-ratio: 1;
+
+    path {
+      stroke: var(--secondary-100);
+    }
+  }
+
+  &:disabled {
+    svg {
+      path {
+        stroke: var(--secondary-40);
+      }
+    }
+  }
+
+  &.active::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 8px;
+    aspect-ratio: 1;
+    background-color: var(--base-name-red);
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 518px;
+  padding: 16px;
+  color: var(--text-color-80);
+  width: 100%;
+
+  &:not(.dropdown) {
+    padding: 0 24px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    max-height: calc(100vh - 80px);
+    max-height: calc(100dvh - 80px);
+  }
+
+  &.dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 10px;
+    width: max-content;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity ease-in-out 0.15s;
+    box-shadow: var(--shadow-large);
+    background-color: var(--bg-windows);
+    border-radius: 16px;
+
+    .directions__content,
+    .statuses__content {
+      max-height: 222px;
+      overflow: auto;
+      @include layout.scroll;
+    }
+  }
+
+  h3 {
+    @include fonts.heading-h6-medium;
+    white-space: nowrap;
+  }
+  h4 {
+    @include fonts.body-text-medium;
+    white-space: nowrap;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+
+  > button {
+    display: flex;
+
+    svg {
+      width: 24px;
+      aspect-ratio: 1;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  gap: 24px;
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+  }
+}
+
+.directions,
+.statuses {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.statuses {
+  min-width: max-content;
+}
+
+.reset {
+  @include fonts.captions-text-medium;
+  display: flex;
+  margin-top: -4px;
+  color: var(--secondary-100);
+}

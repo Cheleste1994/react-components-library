@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  > input {
+    border: none;
+    background-color: transparent;
+    flex: 1;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    color: var(--text-color-80);
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px var(--bg-bg-windows) inset;
+    }
+  }
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.post {
+  border-bottom: 1px solid var(--base-grey-40);
+
+  &:hover {
+    border-bottom: 1px solid var(--base-grey-80);
+  }
+}

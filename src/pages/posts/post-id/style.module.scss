@@ -1,0 +1,9 @@
+@use '@mixin/layout';
+
+.page {
+  @include layout.page-wrapper;
+}
+
+.title {
+  @include layout.page-title;
+}

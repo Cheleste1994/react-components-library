@@ -1,0 +1,28 @@
+.wrapper {
+  --header-height: 76px;
+  --content-gap: 24px;
+  --wrapper-padding-left: 64px;
+
+  --wrapper-padding-right: 64px;
+
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--bg-windows);
+
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1280px) {
+    --menu-width: 90px;
+  }
+}
+
+.content {
+  display: flex;
+  padding: 0 var(--wrapper-padding-right) 0 var(--wrapper-padding-left);
+  width: 100%;
+  flex: 1;
+  justify-content: center;
+  background-color: var(--bg-windows);
+}

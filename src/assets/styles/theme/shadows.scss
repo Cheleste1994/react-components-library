@@ -1,0 +1,23 @@
+:root {
+  --shadow-xs: 0px 3px 6px 0px #94a3b826;
+  --shadow-sm: 0px 6px 12px 0px #94a3b826;
+  --shadow-md: 0px 10px 20px 0px #94a3b833;
+  --shadow-lg: 0px 16px 32px 0px #94a3b84d;
+  --shadow-xl: 0px 24px 56px 0px #94a3b873;
+
+  --shadow-large: 0px 0px 24px 8px #a0a1a529;
+  --shadow-small: 0px 0px 4px 0px #a0a1a51f;
+  --shadow-header: 0px 4px 4px 0px #a0a1a51f;
+}
+
+[data-theme='dark'] {
+  --shadow-xs: 0px 3px 6px 0px #070a1326;
+  --shadow-sm: 0px 6px 12px 0px #070a1326;
+  --shadow-md: 0px 10px 20px 0px #070a1333;
+  --shadow-lg: 0px 16px 32px 0px #070a134d;
+  --shadow-xl: 0px 24px 56px 0px #070a1373;
+
+  --shadow-large: 0px 0px 24px 8px #a0a1a529;
+  --shadow-small: 0px 0px 4px 0px #a0a1a51f;
+  --shadow-header: 0px 4px 4px 0px #a0a1a51f;
+}

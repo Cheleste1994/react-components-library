@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src:
+    url('/src/assets/fonts/IBMPlexSans-Regular.ttf') format('truetype'),
+    url('/src/assets/fonts/IBMPlexSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src:
+    url('/src/assets/fonts/IBMPlexSans-Medium.ttf') format('truetype'),
+    url('/src/assets/fonts/IBMPlexSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src:
+    url('/src/assets/fonts/IBMPlexSans-SemiBold.ttf') format('truetype'),
+    url('/src/assets/fonts/IBMPlexSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+$font-ibm-plex-sans: 'IBM Plex Sans', sans-serif;
+
+@mixin heading-h1-medium {
+  font-family: $font-ibm-plex-sans;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 76px;
+}
+
+@mixin heading-h2-medium {
+  font-family: $font-ibm-plex-sans;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 64px;
+}
+
+@mixin heading-h3-medium {
+  font-family: $font-ibm-plex-sans;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38px;
+}
+
+@mixin heading-h4-medium {
+  font-family: $font-ibm-plex-sans;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+@mixin heading-h5-medium {
+  font-family: $font-ibm-plex-sans;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+@mixin heading-h6-medium {
+  font-family: $font-ibm-plex-sans;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+@mixin body-text-medium {
+  font-family: $font-ibm-plex-sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+@mixin body-text-regular {
+  font-family: $font-ibm-plex-sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@mixin captions-text-medium {
+  font-family: $font-ibm-plex-sans;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+@mixin captions-text-regular {
+  font-family: $font-ibm-plex-sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+@mixin captions-text-small-regular {
+  font-family: $font-ibm-plex-sans;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+@mixin captions-text-small-medium {
+  font-family: $font-ibm-plex-sans;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+@mixin buttons-text-small-medium {
+  font-family: $font-ibm-plex-sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+@mixin buttons-text-normal-medium {
+  font-family: $font-ibm-plex-sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@mixin buttons-text-big-medium {
+  font-family: $font-ibm-plex-sans;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}

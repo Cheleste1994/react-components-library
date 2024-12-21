@@ -1,0 +1,54 @@
+@use '@mixin/fonts';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    gap: 10px;
+
+    > li {
+      @include fonts.body-text-medium;
+      color: var(--text-color-40);
+
+      display: flex;
+      align-items: center;
+      transition: color 0.15s ease-in-out;
+
+      > button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+      }
+
+      &.current {
+        color: var(--primary-100);
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:not(&.current):hover {
+          color: var(--text-color-20);
+        }
+      }
+
+      &:not(&.current):active {
+        color: var(--text-color-80);
+      }
+
+      &:has(> button:disabled) {
+        color: var(--blue-gray-40);
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 16px;
+  background-color: var(--base-grey-20);
+  border: 1px solid var(--base-grey-40);
+
+  height: 46px;
+
+  @media (max-width: 990px) {
+    height: 34px;
+  }
+}

@@ -1,0 +1,8 @@
+@use './assets/styles/app.scss' as *;
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--main-black);
+  overflow-x: hidden;
+}

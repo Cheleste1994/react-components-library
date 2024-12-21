@@ -1,0 +1,47 @@
+@use '@mixin/fonts';
+
+.heading-h1-medium {
+  @include fonts.heading-h1-medium;
+}
+.heading-h2-medium {
+  @include fonts.heading-h2-medium;
+}
+.heading-h3-medium {
+  @include fonts.heading-h3-medium;
+}
+.heading-h4-medium {
+  @include fonts.heading-h4-medium;
+}
+.heading-h5-medium {
+  @include fonts.heading-h5-medium;
+}
+.heading-h6-medium {
+  @include fonts.heading-h6-medium;
+}
+.body-text-medium {
+  @include fonts.body-text-medium;
+}
+.body-text-regular {
+  @include fonts.body-text-regular;
+}
+.captions-text-medium {
+  @include fonts.captions-text-medium;
+}
+.captions-text-regular {
+  @include fonts.captions-text-regular;
+}
+.captions-text-small-regular {
+  @include fonts.captions-text-small-regular;
+}
+.captions-text-small-medium {
+  @include fonts.captions-text-small-medium;
+}
+.buttons-text-small-medium {
+  @include fonts.buttons-text-small-medium;
+}
+.buttons-text-normal-medium {
+  @include fonts.buttons-text-normal-medium;
+}
+.buttons-text-big-medium {
+  @include fonts.buttons-text-big-medium;
+}

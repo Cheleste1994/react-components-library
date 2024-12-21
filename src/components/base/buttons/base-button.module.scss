@@ -1,0 +1,162 @@
+@use '@mixin/fonts';
+
+.btn {
+  @include fonts.buttons-text-normal-medium;
+  --btn-height-md: 44px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  border-radius: 16px;
+  padding: 0px 24px;
+
+  &.height {
+    &_sm {
+      height: 22px;
+    }
+    &_md {
+      height: 44px;
+    }
+    &_lg {
+      height: 66px;
+    }
+  }
+  &.padding {
+    &_sm {
+      padding: 0px;
+    }
+    &_md {
+      padding: 0px 8px;
+    }
+    &_lg {
+      padding: 0px 23px;
+    }
+  }
+
+  &.max-width {
+    &_md {
+      max-width: 207px;
+    }
+    &_lg {
+      max-width: 256px;
+    }
+    &_full {
+      max-width: 100%;
+    }
+  }
+
+  &.primary {
+    background-color: var(--primary-100);
+    box-shadow: var(--shadow-small);
+    color: var(--bg-windows);
+
+    svg {
+      path {
+        stroke: var(--text-button-white);
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: var(--primary-80);
+      }
+    }
+
+    &:active {
+      background-color: var(--primary-80);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: auto;
+    }
+  }
+
+  &.secondary {
+    border: 1px solid var(--primary-100);
+    color: var(--primary-100);
+
+    svg {
+      path {
+        stroke: var(--primary-100);
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        border: 1px solid var(--primary-80);
+        color: var(--primary-80);
+      }
+    }
+
+    &:active {
+      color: var(--primary-100-pressed);
+      border: 1px solid var(--primary-100-pressed);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: auto;
+    }
+  }
+
+  @media (max-width: 500px) {
+    @include fonts.buttons-text-small-medium;
+  }
+}
+
+.icon {
+  &__start,
+  &__end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 20px;
+      aspect-ratio: 1;
+    }
+  }
+
+  &__start {
+    &.size {
+      &_sm {
+        svg {
+          width: 16px;
+        }
+      }
+      &_md {
+        svg {
+          width: 20px;
+        }
+      }
+      &_lg {
+        svg {
+          width: 24px;
+        }
+      }
+    }
+  }
+
+  &__end {
+    &.size {
+      &_sm {
+        svg {
+          width: 16px;
+        }
+      }
+      &_md {
+        svg {
+          width: 20px;
+        }
+      }
+      &_lg {
+        svg {
+          width: 24px;
+        }
+      }
+    }
+  }
+}
