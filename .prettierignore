@@ -9,3 +9,5 @@ coverage
 **/.svn
 **/.hg
 **/node_modules
+.vscode
+.husky
